@@ -3,5 +3,30 @@
     "id": "jBWMVGjm50l6LGwepDoty",
     "username": "frontendmaster"
   },
-  "pet": []
+  "pets": [
+    {
+      "id": "2",
+      "type": "CAT",
+      "name": "Kittymenti",
+      "createdAt": "153248292022"
+    },
+    {
+      "id": "7FJnuMnuGd97JHJuD-630",
+      "createdAt": 1591474017248,
+      "name": "Beauty",
+      "type": "CAT"
+    },
+    {
+      "id": "PBaa3Aj0rqpEXpf8E3nef",
+      "createdAt": 1591474078102,
+      "name": "Pagne",
+      "type": "DOG"
+    },
+    {
+      "id": "dUpif54kADSe22U4jUb2W",
+      "createdAt": 1591474176931,
+      "name": "Pagne",
+      "type": "DOG"
+    }
+  ]
 }
