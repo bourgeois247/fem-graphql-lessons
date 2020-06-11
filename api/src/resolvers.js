@@ -19,7 +19,7 @@ module.exports = {
   },
   Mutation: {
     addPet(_, { newPet }, context) {
-      return context.models.Pet.create(newPet);
+      return context.models.Pet.create({ ...newPet, owner: context.user.id });
     },
     updatePet(_, { petUpdateData }, context) {
       return context.models.Pet.update(petUpdateData)
@@ -33,9 +33,16 @@ module.exports = {
       return pet.type === 'DOG'
         ? 'https://placedog.net/300/300'
         : 'http://placekitten.com/300/300'
+    },
+    owner(pet, _, context) {
+      // get the user whose Id matches pet.id
+      return context.models.User.findOne();
     }
   },
   User: {
-    
+    pets(user, _, context) {
+      // get all pets with a userId of user.id
+      return context.models.Pet.findMany({ owner: user.id })
+    }
   }
 }

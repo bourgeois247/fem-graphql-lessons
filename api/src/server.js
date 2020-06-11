@@ -9,6 +9,7 @@ const server = new ApolloServer({
   context: {
     db,
     models,
+    user: models.User.findOne()
   }
 });
 
